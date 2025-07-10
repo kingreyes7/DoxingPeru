@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DoxingPeru</title>
+  <link rel="icon" href="logoport.png" type="image/png">
+  <link rel="stylesheet" href="css/estilos.css" />
+</head>
+
+<body>
+  <section class="form-gif-container">
+    <!-- FORMULARIO -->
+    <div class="formulario">
+      <h1>Buscar persona por DNI</h1>
+      <div class="container">
+        <div class="input">
+          <input class="dni" id="dni" name="dni" placeholder="Número de DNI" type="number">
+        </div>
+        <div class="button">
+          <button id="boton">BUSCAR</button>
+        </div>
+      </div>
+
+      <div class="resultado">
+        <div class="dni">
+          <div class="label">
+            <h2>Dni</h2>
+          </div>
+          <div class="res">
+            <input id="doc" readonly type="text">
+          </div>
+        </div>
+
+        <div class="nombre">
+          <div class="label">
+            <h2>Nombre</h2>
+          </div>
+          <div class="res">
+            <input id="nombre" readonly type="text">
+          </div>
+        </div>
+
+        <div class="apellido">
+          <div class="label">
+            <h2>Apellido</h2>
+          </div>
+          <div class="res">
+            <input id="apellido" readonly type="text">
+          </div>
+        </div>
+
+        <div class="cui">
+          <div class="label">
+            <h2>Cui</h2>
+          </div>
+          <div class="res">
+            <input id="cui" readonly type="text">
+          </div>
+        </div>
+      </div>
+
+      <!-- 🎵 Botones de música -->
+      <div class="controles-musica">
+        <button id="playBtn">🎵 Reproducir Música</button>
+        <button id="pauseBtn">⏸️ Pausar Música</button>
+      </div>
+    </div>
+
+    <!-- GIF DECORATIVO -->
+    <div class="gif-container">
+      <img src="y5.gif" alt="Decoración GIF" />
+    </div>
+        <div class="gif-container">
+      <img src="X5NZ.gif" alt="Decoración GIF" />
+    </div>
+  </section>
+
+  <!-- Audio oculto -->
+     <audio id="musica" src="music.mp3" loop></audio>
+  <audio id="musica" src="El Chombo, Dancing Green Alien - Dame Tu Cosita feat. Cutty Ranks (Official Video) [Ultra Records].mp3" loop></audio>
+
+  <!-- Scripts -->
+  <script src="js/Main.js"></script>
+  <script>
+    const audio = document.getElementById('musica');
+    const playBtn = document.getElementById('playBtn');
+    const pauseBtn = document.getElementById('pauseBtn');
+
+    playBtn.addEventListener('click', () => {
+      audio.play();
+    });
+
+    pauseBtn.addEventListener('click', () => {
+      audio.pause();
+    });
+  </script>
+</body>
+
+</html>
+
