@@ -16,7 +16,7 @@
 
 body {
   background: linear-gradient(var(--bg-overlay), var(--bg-overlay)),
-    url('portada.jpg') no-repeat center center fixed;
+    url('../portada.jpg') no-repeat center center fixed;
   background-size: cover;
   display: flex;
   justify-content: center;
