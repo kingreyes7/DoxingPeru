@@ -1,0 +1,169 @@
+:root {
+  --main-color: rgba(4, 9, 106, 0.85);
+  --accent-color: #131106;
+  --text-color: #ffffff;
+  --bg-overlay: rgba(0, 0, 0, 0.4);
+  --border-radius: 12px;
+  --shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: linear-gradient(var(--bg-overlay), var(--bg-overlay)),
+    url('../portada.jpg') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.form-gif-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.formulario {
+  width: 100%;
+  max-width: 500px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.2rem;
+  color: #ffffff;
+  margin-bottom: 30px;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.container {
+  background: var(--main-color);
+  border-radius: var(--border-radius);
+  padding: 30px;
+  box-shadow: var(--shadow);
+  margin-bottom: 20px;
+}
+
+#dni {
+  width: 100%;
+  padding: 15px 20px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: var(--border-radius);
+  outline: none;
+  margin-bottom: 20px;
+  background: rgba(255, 255, 255, 0.218);
+  color: var(--text-color);
+}
+
+#dni::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.button button {
+  width: 100%;
+  padding: 15px 0;
+  background: var(--accent-color);
+  color: var(--text-color);
+  font-size: 1.1rem;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.button button:hover {
+  background: #00332c;
+}
+
+.resultado {
+  background: var(--main-color);
+  border-radius: var(--border-radius);
+  padding: 30px;
+  box-shadow: var(--shadow);
+}
+
+.resultado h2 {
+  color: var(--text-color);
+  font-size: 1rem;
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+.resultado .dni,
+.resultado .nombre,
+.resultado .apellido,
+.resultado .cui {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.label {
+  margin-bottom: 5px;
+}
+
+.res input {
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 1rem;
+  border: none;
+  border-radius: var(--border-radius);
+  background: rgba(255, 255, 255, 0.2);
+  color: var(--text-color);
+}
+
+.res input:read-only {
+  cursor: not-allowed;
+}
+
+/* ✅ GIF CONTAINER CORREGIDO PARA APILAR */
+.gif-container {
+  flex: 1 1 200px;
+  display: flex;
+  flex-direction: column;  /* 👈 apila imagen y botones */
+  justify-content: center;
+  align-items: center;
+}
+
+.gif-container img {
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* ✅ BOTONES DE MÚSICA DEBAJO DEL GIF */
+.controles-musica {
+  margin-top: 20px;
+  text-align: center;
+}
+
+#playBtn,
+#pauseBtn {
+  padding: 10px 20px;
+  margin: 5px;
+  background: #004d40;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#playBtn:hover,
+#pauseBtn:hover {
+  background: #002f2c;
+}
